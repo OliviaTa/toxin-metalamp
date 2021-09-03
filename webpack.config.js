@@ -12,7 +12,7 @@ const PAGES_DIR = `${PATHS.src}/pages`;
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
 
 module.exports = {
-    entry: './src/index.js',
+    entry: ['./src/index.js', './src/pages/index.pug'],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
